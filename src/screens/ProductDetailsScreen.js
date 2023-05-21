@@ -9,12 +9,14 @@ import {
   useWindowDimensions,
 } from "react-native";
 import products from "../data/products";
-import { useSelector } from "react-redux";
+import { cartSlice } from "../store/cartSlice";
+import { useSelector, useDispatch } from "react-redux";
 const ProductDetailsScreen = () => {
-  const product = useSelector(state => state.products.selectedProduct);
+  const product = useSelector((state) => state.products.selectedProduct);
+  const dispatch = useDispatch();
   const { width } = useWindowDimensions(); //uses hook react native to make image to be the window width
   const addtoCart = () => {
-    console.warn("Add to cart");
+    dispatch(cartSlice.actions.addCartItem({ product }));
   };
 
   return (

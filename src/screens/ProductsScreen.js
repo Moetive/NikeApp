@@ -8,7 +8,7 @@ import {
   Pressable,
 } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
-// import products from "../data/products";
+import products from "../data/products";
 import { productSlice } from "../store/productsSlice";
 const ProductsScreen = ({ navigation }) => {
   const dispatch = useDispatch();
