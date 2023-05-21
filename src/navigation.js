@@ -15,7 +15,7 @@ const Navigation = () => {
         <Stack.Screen
           name="Products"
           component={ProductsScreen}
-          options={({navigation})=> ({
+          options={({navigation}) => ({
             headerRight: () => (
               <Pressable
                 onPress={() => navigation.navigate("Cart")}
